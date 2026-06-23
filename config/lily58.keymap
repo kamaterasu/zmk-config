@@ -109,18 +109,19 @@
 // ------------------------------------------------------------------------------------------
 // | ESC  |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | TAB  |  Q  |  W  |  E  |  R  |  T  |              |  Y  |  U  |  I  |  O  |  P  |  '   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |              |  H  |  J  |  K  |  L  |  ;  | ENT  |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |  X  |  | X   |  N  |  M  |  ,  |  .  |  /  | SHFT |
+// | SHFT |  A  |  S  |  D  |  F  |  G  |              |  H  |  J  |  K  |  L  |  ;  | ENT  |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  |  X  |  | X   |  N  |  M  |  ,  |  .  |  /  | SHFT |
 //        no home-row mods: A S D F / H J K L are plain (hold = key repeat)
-// thumbs  tap/hold ->  L: TAB/Alt  ESC/GUI  SPC/NAV     R: ENT/SYM  BSP/Ctrl  DEL
-//   mods also on outer cols: CTRL (left) + SHIFT (both pinkies)
+// thumbs ->  L: TAB(hold NAV) | BSPC | SPACE     R: ENTER | BSPC | DEL(hold SYM)
+//   hold NAV + SYM together = FUN layer
+//   mods on outer cols: CTRL (left) + SHIFT (both pinkies); GUI/ALT on NAV/SYM home row
 //   innermost thumb each side = no physical key (&none)
             bindings = <
 &kp ESC   &kp N1       &kp N2       &kp N3        &kp N4       &kp N5                          &kp N6    &kp N7        &kp N8        &kp N9       &kp N0         &kp BSPC
 &kp TAB   &kp Q        &kp W        &kp E         &kp R        &kp T                           &kp Y     &kp U         &kp I         &kp O        &kp P          &kp SQT
-&kp LCTRL &kp A        &kp S        &kp D         &kp F        &kp G                           &kp H     &kp J         &kp K         &kp L        &kp SEMI       &kp RET
-&kp LSHFT &kp Z        &kp X        &kp C         &kp V        &kp B    &none      &none       &kp N     &kp M         &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
-                                    &mtt LALT TAB &mtt LGUI ESC &ltt NAV SPACE &none         &none        &ltt SYM RET  &mtt LCTRL BSPC &kp DEL
+&kp LSHFT &kp A        &kp S        &kp D         &kp F        &kp G                           &kp H     &kp J         &kp K         &kp L        &kp SEMI       &kp RET
+&kp LCTRL &kp Z        &kp X        &kp C         &kp V        &kp B    &none      &none       &kp N     &kp M         &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
+                                    &ltt NAV TAB  &kp BSPC      &kp SPACE      &none         &none        &kp RET       &kp BSPC      &ltt SYM DEL
             >;
         };
 
