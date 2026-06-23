@@ -5,15 +5,15 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # Additional modules containing boards/shields/custom code can be listed here as well
-    - name: mcrosson
-      url-base: https://github.com/mcrosson
+    - name: m165437
+      url-base: https://github.com/m165437
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
     - name: nice-view-gem
-      remote: mcrosson
-      revision: main
+      remote: m165437
+      revision: v0.3.0
   self:
     path: config
