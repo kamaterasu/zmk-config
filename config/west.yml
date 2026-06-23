@@ -5,15 +5,15 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # Additional modules containing boards/shields/custom code can be listed here as well
-    - name: dsifry
-      url-base: https://github.com/dsifry
+    - name: whoop-t
+      url-base: https://github.com/whoop-t
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: nice-view-mod
-      remote: dsifry
+    - name: nice-adventure-time
+      remote: whoop-t
       revision: main
   self:
     path: config
