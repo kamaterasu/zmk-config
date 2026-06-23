@@ -89,14 +89,15 @@
 // | CTRL |  A  |  S  |  D  |  F  |  G  |              |  H  |  J  |  K  |  L  |  ;  | ENT  |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |  X  |  | X   |  N  |  M  |  ,  |  .  |  /  | SHFT |
 //        home-row mods: A=GUI S=ALT D=CTL F=SFT      J=SFT K=CTL L=ALT ;=GUI
-//                      | GUI | SPC | TAB |  |  ENT | BSP | DEL |
-//                       (hold SPC=NAV) (hold TAB=SYM)  (hold ENT=SYM) (hold BSP=NAV)
+// left thumbs (outer->in): TAB | GUI | SPC      right (in->outer): ENT | BSP | DEL
+//   hold TAB=SYM, hold SPC=NAV                    hold ENT=SYM, hold BSP=NAV
+//   innermost thumb each side = no physical key (&none)
             bindings = <
 &kp ESC   &kp N1       &kp N2       &kp N3        &kp N4       &kp N5                          &kp N6    &kp N7        &kp N8        &kp N9       &kp N0         &kp BSPC
 &kp TAB   &kp Q        &kp W        &kp E         &kp R        &kp T                           &kp Y     &kp U         &kp I         &kp O        &kp P          &kp SQT
 &kp LCTRL &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F &kp G                           &kp H     &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI &kp RET
 &kp LSHFT &kp Z        &kp X        &kp C         &kp V        &kp B    &none      &none       &kp N     &kp M         &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
-                                    &none         &kp LGUI     &lt NAV SPACE  &lt SYM TAB    &lt SYM RET  &lt NAV BSPC  &kp DEL      &none
+                                    &lt SYM TAB   &kp LGUI     &lt NAV SPACE  &none          &none        &lt SYM RET   &lt NAV BSPC &kp DEL
             >;
         };
 
@@ -113,7 +114,7 @@
 &trans  &trans     &trans     &trans     &trans     &trans                       &kp HOME   &kp PG_DN   &kp PG_UP  &kp END    &trans  &trans
 &trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans                       &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &trans  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans   &none    &none      &trans     &trans      &trans     &trans     &trans  &trans
-                              &none      &trans     &trans   &trans   &trans     &trans     &trans      &none
+                              &trans     &trans     &trans   &none    &none      &trans     &trans      &trans
             >;
         };
 
@@ -130,7 +131,7 @@
 &trans  &kp BSLH   &kp FSLH   &kp LBRC   &kp RBRC   &kp PIPE                     &kp PLUS   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp GRAVE
 &trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp TILDE                    &kp UNDER  &kp SEMI   &kp COLON  &kp LT     &kp GT     &kp DQT
 &trans  &trans     &trans     &trans     &trans     &kp QMARK  &none    &none    &trans     &trans     &trans     &trans     &trans     &trans
-                              &none      &trans     &trans     &trans   &trans   &trans     &trans     &none
+                              &trans     &trans     &trans     &none    &none    &trans     &trans     &trans
             >;
         };
 
@@ -147,7 +148,7 @@
 &studio_unlock &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &bootloader  &sys_reset               &kp F7     &kp F8       &kp F9       &kp F10     &kp F11   &kp F12
 &trans         &kp LGUI         &kp LALT          &kp LCTRL         &kp LSHFT    &trans                   &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT  &kp C_PP  &trans
 &trans         &trans           &trans            &trans            &trans       &trans   &none   &none   &kp C_MUTE &trans       &trans       &trans      &trans    &trans
-                                                  &none             &trans       &trans   &trans  &trans  &trans     &trans       &none
+                                                  &trans            &trans       &trans   &none   &none   &trans     &trans       &trans
             >;
         };
     };
